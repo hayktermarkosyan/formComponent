@@ -1,0 +1,187 @@
+.outsideBorder {
+    border: 1px solid #E7E3E3;
+    border-radius: 4px;
+    margin-top: 20px;
+}
+
+.formBorder {
+    border: 1px solid #E7E3E3;
+    border-radius: 2px;
+    margin: 15px;
+}
+
+.rowStyle {
+    height: 60px!important;
+    margin: 0px!important;
+}
+
+.rowStyle:hover {
+    background-color: #F5FCFC;
+}
+
+.HR {
+    margin: 0px;
+}
+
+.rowParagraph {
+    padding: 18px!important;
+    margin: 0px!important;
+    text-align: left;
+}
+
+.rowCol {
+    padding: 0px!important;
+    width: auto!important;
+}
+
+.profileLogo {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 2px;
+    margin-right: 5px;
+}
+
+.standBtn {
+    margin-top: 17px!important;
+    width: auto!important;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+    color: black!important;
+    background-color: white!important;
+    border-color: #E7E3E3!important;
+}
+
+.standBtn:hover {
+    background-color: #F5FCFC!important;
+}
+
+.multiSearchBtn {
+    margin-top: 17px!important;
+    margin-right: 5px!important;
+    width: auto!important;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+    color: black!important;
+    background-color: white!important;
+    border-color: #E7E3E3!important;
+}
+
+.multiSearchBtn:hover {
+    background-color: #F5FCFC!important;
+}
+
+.plusBtn {
+    margin-top: 17px!important;
+    width: auto!important;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+    color: black!important;
+    background-color: white!important;
+    border-color: #E7E3E3!important;
+}
+
+.plusBtn:hover {
+    background-color: #F5FCFC!important;
+}
+
+.radioBox {
+    margin: 20px 10px 0 0;
+    width: 20px;
+    height: 20px;
+}
+
+.chooseBtn {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background-color: white;
+}
+
+.chooseBtn:hover {
+    background-color: #F5FCFC!important;
+}
+
+.chooseTriangle {
+    border: none!important;
+    background-color: white!important;
+    color: gray!important;
+    width: 30px!important;
+    margin-left: 75px!important;
+    font-size: 24px!important;
+    padding: 0px!important;
+}
+
+.endBtn {
+    width: 40%!important;
+    border-radius: 20px!important;
+    margin-bottom: 15px!important;
+    background-color: #030257!important;
+}
+
+.DropDownContainer {
+    width: 350px!important;
+    padding: 0!important;
+    margin-left: 160px;
+    margin-top: -5px!important;
+    background: #ffffff!important;
+    border: 2px solid #E7E3E3!important;
+    box-sizing: border-box!important;
+    font-weight: 500!important;
+    z-index: 1;
+}
+
+.DropDownItem {
+    margin-left: 5px!important;
+    width: max-content!important;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+    color: black!important;
+    background-color: white!important;
+    text-align: left!important;
+    border: 1px solid #E7E3E3!important;
+    border-radius: 5px;
+}
+
+.DropDownItem:hover {
+    background-color: #E7E3E3!important;
+}
+
+.DropDownItemColumn {
+    margin: 0 7px 5px 7px;
+    padding: 5px 0 5px 0;
+}
+
+.DropDownItemColumn:hover {
+    background-color: #E7E3E3!important;
+    border-radius: 4px;
+}
+
+.DropDownItemColumn:active {
+    color: #F5FCFC!important;
+}
+
+.DropDownListBtn {
+    border-radius: 20px!important;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 45%;
+}
+
+.secondDropDownMenuParagraphs {
+    margin: 0 7px 10px 7px;
+    text-align: left;
+    padding: 7px;
+}
+
+.secondDropDownMenuParagraphs:hover {
+    background-color: #E7E3E3!important;
+    border-radius: 4px;
+}
