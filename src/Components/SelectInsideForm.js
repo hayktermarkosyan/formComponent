@@ -3,7 +3,7 @@ import './SelectInsideForm.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Form, Button, Dropdown } from 'react-bootstrap';
 import profileLogo from './profile.png';
-import { Select } from "./Select/Select";
+import { UsersSelect } from "./Select";
 
 
 function SelectInsideForm () {
