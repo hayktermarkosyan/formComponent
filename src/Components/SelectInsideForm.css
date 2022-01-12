@@ -16,7 +16,7 @@
 }
 
 .rowStyle:hover {
-    background-color: #F5FCFC;
+    background-color: #d0fcfc;
 }
 
 .HR {
@@ -144,7 +144,7 @@
     padding-left: 10px!important;
     padding-right: 10px!important;
     color: black!important;
-    background-color: white!important;
+    background-color: white;
     text-align: left!important;
     border: 1px solid #E7E3E3!important;
     border-radius: 5px;
@@ -162,10 +162,6 @@
 .DropDownItemColumn:hover {
     background-color: #E7E3E3!important;
     border-radius: 4px;
-}
-
-.DropDownItemColumn:active {
-    color: #F5FCFC!important;
 }
 
 .DropDownListBtn {

@@ -4,16 +4,75 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Form, Button, Dropdown } from 'react-bootstrap';
 import profileLogo from './profile.png';
 
-const first_INPUT_options = ["Brandon Waelchi", "Rosina Ernser", "Jaunita Champlin", "Jaycee Renner", "Lucius Conn"];
 
 function SelectInsideForm () {
 
     const [is_FIRST_Open, setIs_FIRST_Open] = useState(false);
-    const [selected_FIRST_Option, setSelected_FIRST_Option] = useState(null);
+    const [FIRST_Option, setFIRST_Option] = useState([
+        {
+            id: Math.random(),
+            name: "Brandon Waelchi",
+            icon: (<img src={profileLogo} alt="profileLogo" className="profileLogo" />),
+            isSelected: false
+        },
+        {
+            id: Math.random(),
+            name: "Rosina Ernser",
+            icon: (<img src={profileLogo} alt="profileLogo" className="profileLogo" />),
+            isSelected: false
+        }, 
+        {
+            id: Math.random(),
+            name: "Jaunita Champlin",
+            icon: (<img src={profileLogo} alt="profileLogo" className="profileLogo" />),
+            isSelected: false
+        }, 
+        {
+            id: Math.random(),
+            name: "Jaycee Renner",
+            icon: (<img src={profileLogo} alt="profileLogo" className="profileLogo" />),
+            isSelected: false
+        },
+        {
+            id: Math.random(),
+            name: "Lucius Conn",
+            icon: (<img src={profileLogo} alt="profileLogo" className="profileLogo" />),
+            isSelected: true
+        }
+    ]);
+
+    const [is_SECOND_Open, setIs_SECOND_Open] = useState(false);
+    const [SECOND_Option, setSECOND_Option] = useState([
+        {
+            id: Math.random(),
+            name: "Global",
+            icon: (<img src={profileLogo} alt="profileLogo" className="profileLogo" />),
+            isSelected: false
+        },
+        {
+            id: Math.random(),
+            name: "Dynamic Factors Orchestrator",
+            icon: (<img src={profileLogo} alt="profileLogo" className="profileLogo" />),
+            isSelected: false
+        }, 
+        {
+            id: Math.random(),
+            name: "Human Communications Administrator",
+            icon: (<img src={profileLogo} alt="profileLogo" className="profileLogo" />),
+            isSelected: false
+        }, 
+        {
+            id: Math.random(),
+            name: "Principal Functionality Producer",
+            icon: (<img src={profileLogo} alt="profileLogo" className="profileLogo" />),
+            isSelected: false
+        }
+    ]);
+
     const ref_FIRST = useRef();
 
     useEffect(() => {
-        const checkIfClickedOutside = (e) => {
+        const checkIfClickedOutside = e => {
             if (is_FIRST_Open && ref_FIRST.current && !ref_FIRST.current.contains(e.target)) {
                 setIs_FIRST_Open(false);
             }
@@ -24,33 +83,10 @@ function SelectInsideForm () {
         };
     }, [is_FIRST_Open]);
 
-    const [is_SECOND_Open, setIs_SECOND_Open] = useState(false);
-    const [SECOND_Option, setSECOND_Option] = useState([
-        {
-            name: "Global",
-            icon: (<img src={profileLogo} alt="profileLogo" className="profileLogo" />),
-            isSelected: false
-        },
-        {
-            name: "Dynamic Factors Orchestrator",
-            icon: (<img src={profileLogo} alt="profileLogo" className="profileLogo" />),
-            isSelected: false
-        }, 
-        {
-            name: "Human Communications Administrator",
-            icon: (<img src={profileLogo} alt="profileLogo" className="profileLogo" />),
-            isSelected: false
-        }, 
-        {
-            name: "Principal Functionality Producer",
-            icon: (<img src={profileLogo} alt="profileLogo" className="profileLogo" />),
-            isSelected: false
-        }
-    ]);
     const ref_SECOND = useRef();
 
     useEffect(() => {
-        const checkIfClickedOutside = (e) => {
+        const checkIfClickedOutside = e => {
             if (is_SECOND_Open && ref_SECOND.current && !ref_SECOND.current.contains(e.target)) {
                 setIs_SECOND_Open(false);
             }
@@ -65,15 +101,39 @@ function SelectInsideForm () {
     const toggling_SECONDinput = () => setIs_SECOND_Open(!is_SECOND_Open);
 
     const on_FIRSTinput_OptionClicked = value => () => {
-        setSelected_FIRST_Option(value);
+        setFIRST_Option(FIRST_Option.map((option) => {
+            if (option.id === value.id) {
+                if (value.isSelected === false) {
+                    value.isSelected = !value.isSelected;
+                    return value;
+                } else {
+                    return value;
+                }
+            }
+            if(option.isSelected === true) {
+                option.isSelected = false;
+            }
+            return option;
+        }));
         setIs_FIRST_Open(false);
     };
 
     const on_SECONDinput_OptionClicked = value => () => {
-        setSECOND_Option(() => !value.isSelected)
+        setSECOND_Option(SECOND_Option.map((option) => {
+            if (option.id === value.id) {
+                if (value.isSelected === false) {
+                    value.isSelected = !value.isSelected;
+                    return value;
+                } else {
+                    return value;
+                }
+            }
+            if(option.isSelected === true) {
+                option.isSelected = false;
+            }
+            return option;
+        }));
         setIs_SECOND_Open(false);
-
-        console.log(value.isSelected)
     };
 
     return (
@@ -91,11 +151,10 @@ function SelectInsideForm () {
                             <p className="rowParagraph">PropertySelector</p>
                         </Col>
 
-                        <Col md={{ span: 8 }} className="rowCol">
-                            
+                        <Col md={{ span: 8 }} className="rowCol"> 
                             <Button className="standBtn">
-                                <img src={profileLogo} alt="profileLogo" className="profileLogo" />
-                                {selected_FIRST_Option || "Lucius Conn"}
+                                {FIRST_Option.filter(option => option.isSelected)[0].icon}
+                                {FIRST_Option.filter(option => option.isSelected)[0].name}
                             </Button>                   
                         </Col>
 
@@ -107,14 +166,35 @@ function SelectInsideForm () {
                                 >
                                     <b>Choose a Topic</b>
                                 </p>
-                                {first_INPUT_options.map(option => (
-                                    <Col className="DropDownItemColumn" onClick={on_FIRSTinput_OptionClicked(option)} key={Math.random()}>
-                                        <Dropdown.Item className="DropDownItem">
-                                            <img src={profileLogo} alt="profileLogo" className="profileLogo" />
-                                            {option}
-                                        </Dropdown.Item>
-                                    </Col>
-                                ))}
+                                {FIRST_Option.map(option => {
+                                    if (option.isSelected) {
+                                        return (
+                                            <Col 
+                                                style={{backgroundColor: '#d0fcfc'}}
+                                                className="DropDownItemColumn" 
+                                                onClick={on_FIRSTinput_OptionClicked(option)} 
+                                                key={Math.random()}
+                                            >
+                                                <Dropdown.Item
+                                                    style={{backgroundColor: '#d0fcfc'}} 
+                                                    className="DropDownItem"
+                                                >
+                                                    {option.icon}
+                                                    {option.name}
+                                                </Dropdown.Item>
+                                            </Col>
+                                        )
+                                    } else {
+                                        return (
+                                            <Col className="DropDownItemColumn" onClick={on_FIRSTinput_OptionClicked(option)} key={Math.random()}>
+                                                <Dropdown.Item className="DropDownItem">
+                                                    {option.icon}
+                                                    {option.name}
+                                                </Dropdown.Item>
+                                            </Col>
+                                        )
+                                    }
+                                })}
                                 <Button 
                                     className="btn-danger DropDownListBtn"
                                     style={{marginRight: '0.5rem'}}
@@ -135,8 +215,13 @@ function SelectInsideForm () {
                             <p className="rowParagraph">WithExtraOptions</p>
                         </Col>
 
-                        <Col md={{ span: 8 }} className="rowCol">                            
-                            <Button disabled className="standBtn">I am a Placeholder</Button>
+                        <Col md={{ span: 8 }} className="rowCol"> 
+                            {SECOND_Option.filter(option => option.isSelected).length !== 0 ? 
+                                <Button className="standBtn">
+                                    {SECOND_Option.filter(option => option.isSelected)[0].icon}
+                                    {SECOND_Option.filter(option => option.isSelected)[0].name}
+                                </Button> : 
+                                <Button disabled className="standBtn">I am a Placeholder</Button>}
                         </Col>
 
                         {is_SECOND_Open && (
@@ -168,14 +253,40 @@ function SelectInsideForm () {
                                     Extra Option 3
                                 </Button>
 
-                                {SECOND_Option.map(option => (
-                                    <Col className="DropDownItemColumn" onClick={on_SECONDinput_OptionClicked(option)} key={Math.random()}>
-                                        <Dropdown.Item className="DropDownItem">
-                                            {option.icon}
-                                            {option.name}
-                                        </Dropdown.Item>
-                                    </Col>
-                                ))}
+                                {SECOND_Option.map(option => {
+                                    if (option.isSelected) {
+                                        return (
+                                            <Col 
+                                                style={{backgroundColor: '#d0fcfc'}} 
+                                                className="DropDownItemColumn" 
+                                                onClick={on_SECONDinput_OptionClicked(option)} 
+                                                key={Math.random()}
+                                            >
+                                                <Dropdown.Item 
+                                                    style={{backgroundColor: '#d0fcfc'}}
+                                                    className="DropDownItem"    
+                                                >
+                                                    {option.icon}
+                                                    {option.name}
+                                                </Dropdown.Item>
+                                            </Col>
+                                        )
+                                    } else {
+                                        return (
+                                            <Col 
+                                                className="DropDownItemColumn" 
+                                                onClick={on_SECONDinput_OptionClicked(option)}
+                                                key={Math.random()}
+                                            >
+                                                <Dropdown.Item className="DropDownItem">
+                                                    {option.icon}
+                                                    {option.name}
+                                                </Dropdown.Item>
+                                            </Col>
+                                        )
+                                    }
+                                    })
+                                }
                                 <Button 
                                     className="btn-danger DropDownListBtn"
                                     style={{marginRight: '0.5rem'}}
