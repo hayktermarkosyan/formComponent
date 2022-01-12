@@ -3,6 +3,7 @@ import './SelectInsideForm.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col, Form, Button, Dropdown } from 'react-bootstrap';
 import profileLogo from './profile.png';
+import { Select } from "./Select/Select";
 
 
 function SelectInsideForm () {
@@ -143,6 +144,8 @@ function SelectInsideForm () {
                     <Row className="rowStyle" style={{backgroundColor: '#F5FCFC'}}>
                         <p className="rowParagraph"><b>SelectInsideForm</b></p>
                     </Row>
+
+                    <UsersSelect onSelect={console.log} />
 
                     <hr className="HR" />
 
