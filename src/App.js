@@ -1,11 +1,11 @@
 import './App.css';
-import SelectInsideForm from './Components/SelectInsideForm';
+import FormContainer from './Components/FormContainer';
 
 
 function App() {
   return (
     <div className="App">
-      <SelectInsideForm />
+      <FormContainer />
     </div>
   );
 }

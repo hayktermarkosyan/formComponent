@@ -1,0 +1,16 @@
+.outsideBorder {
+    border: 1px solid #E7E3E3;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.formBorder {
+    border: 1px solid #E7E3E3;
+    border-radius: 2px;
+    margin: 10px 15px 10px 15px;
+}
+
+.HR {
+    margin: 0px;
+}
+

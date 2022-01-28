@@ -1,0 +1,46 @@
+.rowStyle {
+    height: 60px!important;
+    margin: 0px!important;
+}
+
+.rowStyle:hover {
+    background-color: #d0fcfc;
+}
+
+.rowParagraph {
+    padding: 18px!important;
+    margin: 0px!important;
+    text-align: left;
+}
+
+.rowCol {
+    padding: 0px!important;
+    width: auto!important;
+}
+
+.radioBox {
+    margin: 20px 10px 0 0;
+    width: 20px;
+    height: 20px;
+}
+
+.chooseBtn {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    background-color: white;
+}
+
+.chooseBtn:hover {
+    background-color: #F5FCFC!important;
+}
+
+.chooseTriangle {
+    border: none!important;
+    background-color: white!important;
+    color: gray!important;
+    width: 30px!important;
+    margin-left: 75px!important;
+    font-size: 24px!important;
+    padding: 0px!important;
+}
