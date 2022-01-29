@@ -3,7 +3,7 @@ import { Row, Col, Button, Dropdown } from 'react-bootstrap';
 import typeLogo from '../icons/type.png';
 import './styles/Type.css';
 
-function Type({isReset}) {
+function Type({isReset, typeDone}) {
     const [isOpen, setIsOpen] = useState(false);
     const [options, setOptions] = useState([
         {
@@ -47,14 +47,13 @@ function Type({isReset}) {
             if (option.id === value.id) {
                 if (value.isSelected === false) {
                     value.isSelected = !value.isSelected;
+                    typeDone();
                     return value;
                 } else {
                     return value;
                 }
             }
-            if(option.isSelected === true) {
-                option.isSelected = false;
-            }
+            if(option.isSelected === true) option.isSelected = false
             return option;
         }));
         setIsOpen(false);

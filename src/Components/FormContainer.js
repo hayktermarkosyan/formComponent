@@ -18,8 +18,29 @@ import ResetButton from './FormElements/ResetButton';
 function FormContainer () {
 
     const [isReset, setIsReset] = useState(false);
+    const handleReset = () => { 
+        setIsReset(!isReset);
+        setWithExtraOptions(false);
+        setSearchSearch(false);
+        setStatus(false);
+        setType(false);
+        setUrgency(false);
+    }
 
-    const handleReset = () => setIsReset(!isReset);
+    const [withExtraOptions, setWithExtraOptions] = useState(false);
+    const withExtraOptionsDone = () => setWithExtraOptions(true);
+
+    const [searchSearch, setSearchSearch] = useState(false);
+    const searchSearchDone = () => setSearchSearch(true);
+
+    const [status, setStatus] = useState(false);
+    const statusDone = () => setStatus(true);
+
+    const [type, setType] = useState(false);
+    const typeDone = () => setType(true);
+
+    const [urgency, setUrgency] = useState(false);
+    const urgencyDone = () => setUrgency(true);
 
     return (
         <Container>
@@ -34,11 +55,17 @@ function FormContainer () {
 
                     <hr className="HR" />
 
-                    <WithExtraOptions isReset={isReset} />
+                    <WithExtraOptions 
+                        isReset={isReset} 
+                        withExtraOptionsDone={withExtraOptionsDone}
+                    />
 
                     <hr className="HR" />
 
-                    <SearchSearch isReset={isReset} />
+                    <SearchSearch 
+                        isReset={isReset}
+                        searchSearchDone={searchSearchDone}
+                    />
 
                     <hr className="HR" />
                     
@@ -50,21 +77,37 @@ function FormContainer () {
 
                     <hr className="HR" />
 
-                    <Status isReset={isReset} />
+                    <Status 
+                        isReset={isReset}
+                        statusDone={statusDone}
+                    />
 
                     <hr className="HR" />
                     
-                    <Type isReset={isReset} />
+                    <Type 
+                        isReset={isReset}
+                        typeDone={typeDone}   
+                    />
 
                     <hr className="HR" />
 
-                    <Urgency isReset={isReset} />
+                    <Urgency 
+                        isReset={isReset} 
+                        urgencyDone={urgencyDone}    
+                    />
 
                     <hr className="HR" />
 
                 </Form>
 
-                <SubmitButton handleReset={handleReset} />
+                <SubmitButton 
+                    handleReset={handleReset} 
+                    withExtraOptions={withExtraOptions}
+                    searchSearch={searchSearch}
+                    status={status}
+                    type={type}
+                    urgency={urgency}
+                />
                 
                 <ResetButton handleReset={handleReset} />
             </Col>

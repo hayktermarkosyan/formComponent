@@ -3,7 +3,7 @@ import { Row, Col, Button, Dropdown } from 'react-bootstrap';
 import searchLogo from '../icons/search.png';
 import './styles/SearchSearch.css';
 
-function SearchSearch({isReset}) {
+function SearchSearch({isReset, searchSearchDone}) {
     const [isOpen, setIsOpen] = useState(false);
     const [options, setOptions] = useState([
         {
@@ -47,14 +47,13 @@ function SearchSearch({isReset}) {
             if (option.id === value.id) {
                 if (value.isSelected === false) {
                     value.isSelected = !value.isSelected;
+                    searchSearchDone();
                     return value;
                 } else {
                     return value;
                 }
             }
-            if(option.isSelected === true) {
-                option.isSelected = false;
-            }
+            if(option.isSelected === true) option.isSelected = false
             return option;
         }));
         setIsOpen(false);

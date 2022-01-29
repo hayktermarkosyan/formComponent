@@ -3,7 +3,7 @@ import { Row, Col, Button, Dropdown } from 'react-bootstrap';
 import urgLogo from '../icons/warning.png';
 import './styles/Urgency.css';
 
-function Urgency({isReset}) {
+function Urgency({isReset, urgencyDone}) {
     const [isOpen, setIsOpen] = useState(false);
     const [options, setOptions] = useState([
         {
@@ -47,14 +47,13 @@ function Urgency({isReset}) {
             if (option.id === value.id) {
                 if (value.isSelected === false) {
                     value.isSelected = !value.isSelected;
+                    urgencyDone();
                     return value;
                 } else {
                     return value;
                 }
             }
-            if(option.isSelected === true) {
-                option.isSelected = false;
-            }
+            if(option.isSelected === true) option.isSelected = false
             return option;
         }));
         setIsOpen(false);

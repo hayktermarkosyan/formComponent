@@ -3,7 +3,7 @@ import { Row, Col, Button, Dropdown } from 'react-bootstrap';
 import statLogo from '../icons/check-mark.png';
 import './styles/Status.css';
 
-function Status({isReset}) {
+function Status({isReset, statusDone}) {
     const [isOpen, setIsOpen] = useState(false);
     const [options, setOptions] = useState([
         {
@@ -47,14 +47,13 @@ function Status({isReset}) {
             if (option.id === value.id) {
                 if (value.isSelected === false) {
                     value.isSelected = !value.isSelected;
+                    statusDone();
                     return value;
                 } else {
                     return value;
                 }
             }
-            if(option.isSelected === true) {
-                option.isSelected = false;
-            }
+            if(option.isSelected === true) option.isSelected = false
             return option;
         }));
         setIsOpen(false);

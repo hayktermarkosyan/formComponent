@@ -3,7 +3,7 @@ import { Row, Col, Button, Dropdown } from 'react-bootstrap';
 import briefcaseLogo from '../icons/briefcase.png';
 import './styles/WithExtraOptions.css';
 
-function WithExtraOptions({isReset}) {
+function WithExtraOptions({isReset, withExtraOptionsDone}) {
     const [isOpen, setIsOpen] = useState(false);
     const [options, setOptions] = useState([
         {
@@ -53,14 +53,13 @@ function WithExtraOptions({isReset}) {
             if (option.id === value.id) {
                 if (value.isSelected === false) {
                     value.isSelected = !value.isSelected;
+                    withExtraOptionsDone();
                     return value;
                 } else {
                     return value;
                 }
             }
-            if(option.isSelected === true) {
-                option.isSelected = false;
-            }
+            if(option.isSelected === true) option.isSelected = false
             return option;
         }));
         setIsOpen(false);
@@ -72,7 +71,7 @@ function WithExtraOptions({isReset}) {
             return option;
         })
     } 
-
+    
     return (
         <Row className="rowStyle" onClick={togglingInput} ref={ref}>
             <Col md={{ span: 4 }} className="rowCol">
