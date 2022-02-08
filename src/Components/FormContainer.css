@@ -63,6 +63,12 @@
         font-size: small!important;
     }
 
+    .standBtnMobile {
+        margin-top: 8px!important;
+        height: 44px!important;
+        width: 200px!important;
+    }
+
     .outsideBorder {
         font-size: small;
     }
@@ -80,5 +86,11 @@
         width: 20px!important;
         margin-left: 5px!important;
         font-size: 18px!important;
+    }
+
+    .endBtn {
+        width: 20%!important;
+        margin-bottom: 15px!important;
+        font-size: small!important;
     }
 }

@@ -80,11 +80,11 @@ function WithExtraOptions({isReset, withExtraOptionsDone}) {
 
             <Col md={{ span: 8 }} className="rowCol">
                 {options.filter(option => option.isSelected).length !== 0 ? 
-                    <Button className="standBtn">
+                    <Button className="standBtn standBtnMobile">
                         {options.filter(option => option.isSelected)[0].icon}
                         {options.filter(option => option.isSelected)[0].name}
                     </Button> : 
-                    <Button disabled className="standBtn">I am a Placeholder</Button>}
+                    <Button disabled className="standBtn standBtnMobile">I am a Placeholder</Button>}
             </Col>
 
             {isOpen && (
