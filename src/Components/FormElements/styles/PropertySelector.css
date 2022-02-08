@@ -1,44 +1,8 @@
-.rowStyle {
-    height: 60px!important;
-    margin: 0px!important;
-}
-
-.rowStyle:hover {
-    background-color: #d0fcfc;
-}
-
-.rowParagraph {
-    padding: 18px!important;
-    margin: 0px!important;
-    text-align: left;
-}
-
-.rowCol {
-    padding: 0px!important;
-    width: auto!important;
-}
-
 .profileLogo {
     width: 20px;
     height: 20px;
     margin-bottom: 2px;
     margin-right: 5px;
-}
-
-.standBtn {
-    margin-top: 17px!important;
-    width: auto!important;
-    padding-top: 0px!important;
-    padding-bottom: 0px!important;
-    padding-left: 10px!important;
-    padding-right: 10px!important;
-    color: black!important;
-    background-color: white!important;
-    border-color: #E7E3E3!important;
-}
-
-.standBtn:hover {
-    background-color: #F5FCFC!important;
 }
 
 .DropDownContainer {
@@ -86,20 +50,4 @@
     margin-top: 20px;
     margin-bottom: 10px;
     width: 45%;
-}
-
-@media screen and (max-width: 1280px) and (min-width: 992px) {
-    
-}
-
-@media screen and (max-width: 992px) and (min-width: 720px) {
-    
-}
-
-@media screen and (max-width: 720px) and (min-width: 540px) {
-    
-}
-
-@media screen and (max-width: 540px) {
-    
 }

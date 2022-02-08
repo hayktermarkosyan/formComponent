@@ -14,6 +14,42 @@
     margin: 0px;
 }
 
+.rowStyle {
+    height: 60px;
+    margin: 0px!important;
+}
+
+.rowStyle:hover {
+    background-color: #d0fcfc;
+}
+
+.rowParagraph {
+    padding: 18px!important;
+    margin: 0px!important;
+    text-align: left;
+}
+
+.rowCol {
+    padding: 0px!important;
+    width: auto!important;
+}
+
+.standBtn {
+    margin-top: 17px!important;
+    width: auto!important;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+    color: black!important;
+    background-color: white!important;
+    border-color: #E7E3E3!important;
+}
+
+.standBtn:hover {
+    background-color: #F5FCFC!important;
+}
+
 @media screen and (max-width: 1280px) and (min-width: 992px) {
     
 }
@@ -22,10 +58,27 @@
     
 }
 
-@media screen and (max-width: 720px) and (min-width: 540px) {
-    
-}
+@media screen and (max-width: 720px) {
+    .standBtn {
+        font-size: small!important;
+    }
 
-@media screen and (max-width: 540px) {
+    .outsideBorder {
+        font-size: small;
+    }
+
+    .multiSearchBtn {
+        font-size: small!important;
+    }
+
+    .radioBox {
+        width: 15px!important;
+        height: 15px!important;
+    }
     
+    .chooseTriangle {
+        width: 20px!important;
+        margin-left: 5px!important;
+        font-size: 18px!important;
+    }
 }
