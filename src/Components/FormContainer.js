@@ -44,7 +44,7 @@ function FormContainer () {
 
     return (
         <Container>
-            <Col md={{ span: 6, offset: 3 }} className="outsideBorder">
+            <Col lg={{ span: 6, offset: 3 }}  className="outsideBorder">
                 <Form className="formBorder">
                     
                     <FormHeader />
