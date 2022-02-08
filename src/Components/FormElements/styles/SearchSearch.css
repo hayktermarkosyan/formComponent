@@ -5,12 +5,12 @@
     margin-right: 5px;
 }
 
-.DropDownContainerType {
+.DropDownContainerSearch {
     width: 350px!important;
     height: 270px!important;
     padding: 0!important;
     margin-left: 160px;
-    margin-top: -270px!important;
+    margin-top: -270px;
     background: #ffffff!important;
     border: 2px solid #E7E3E3!important;
     box-sizing: border-box!important;

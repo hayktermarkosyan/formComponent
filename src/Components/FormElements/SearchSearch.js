@@ -82,7 +82,7 @@ function SearchSearch({isReset, searchSearchDone}) {
             </Col>
 
             {isOpen && (
-                <Dropdown className="DropDownContainerStatus">
+                <Dropdown className="DropDownContainerSearch">
                     <p 
                         className="rowParagraph"
                         style={{color: 'gray'}}

@@ -94,4 +94,35 @@
         margin-bottom: 15px!important;
         font-size: small!important;
     }
+
+    .DropDownContainer {
+        margin-left: 50px!important;
+        margin-top: 4px!important;
+    }
+
+    .DropDownContainerSearch {
+        margin-left: 50px!important;
+        margin-top: 4px!important;
+    }
+
+    .DropDownContainerStatus {
+        margin-left: 50px!important;
+        margin-top: -328px!important;
+    }
+
+    .DropDownContainerType {
+        margin-left: 50px!important;
+        margin-top: -328px!important;
+    }
+
+    .DropDownContainerUrgency {
+        margin-left: 50px!important;
+        margin-top: -328px!important;
+    }
+
+    .DropDownListBtn {
+        margin-top: 10px!important;
+        width: 35%!important;
+        font-size: small!important;
+    }
 }
